@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+$ff-merriweather: 'Merriweather', serif;
+$ff-poppins: 'Poppins', sans-serif;
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+// body{
+//     width: 100vw;
+// }
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content }; //600px        
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content }; //900px        
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content }; //1200px   
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content }; //1800px   
+    }
+}
+
+
+.heading-primary{
+    font-size: 3.2rem;
+    font-family: $ff-merriweather;
+    color: #202142;
+
+    @include respond(phone){
+        font-size: 3rem;
+    }
+}
+
+.heading-secondary{
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: $ff-merriweather;
+    color: #000;
+    @include respond(phone){
+        font-size: 2.2rem;
+    }
+}
+.heading-tertiary{
+    font-size: 2rem;
+    font-family: $ff-merriweather;
+    color: #000;
+    margin: 4rem 0;
+    font-weight: bold;
+    @include respond(phone){
+        font-size: 1.8rem;
+    }
+}
+
+.primary-text{
+    font-size: 1.8rem;
+    font-family: $ff-poppins;
+    color: #202142;
+    font-weight: normal;
+
+    & span{
+        font-weight: 600;
+    }
+
+    @include respond(phone){
+        font-size: 1.6rem;
+    }
+}
+.label-text{
+    display: block;
+    font-size: 1.4rem;
+    font-family: $ff-poppins;
+    color: #000;
+}
+.danger-text{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1.6rem;
+    font-family: $ff-poppins;
+    color: red;
+    margin-top: 2rem;
+    @include respond(phone){
+        font-size: 1.4rem;
+    }
+}
+
+
+.btn{
+    cursor: pointer;
+    font-family: $ff-poppins;
+    display: inline-block;
+    outline: 0;
+    &:focus{
+        outline: 0;
+    }
+    &:active{
+        outline: 0;
+    }
+
+    &-setting{
+        border-radius: 3.2rem;
+        padding: 1rem 1.5rem;
+        font-size: 1.6rem;
+        border: 1px solid transparent;
+        background-color: transparent;
+
+        &.active{
+            background: #FCFCFF;
+            border: 1px solid #EFEFFF;
+            border-radius: 3.2rem;
+            font-weight: 500;
+        }
+    }
+
+    &-dark-blue{
+        border-radius: 3.2rem;
+        font-size: 1.6rem;
+        padding: 1.5rem 3rem;
+        border-radius: 1rem;
+        color: #fff;
+        border: 1px solid transparent;
+        background-color: #202142;
+        
+        @include respond(tab-land){
+            padding: 1.5rem 1.5rem;
+        }
+        @include respond(phone){
+            padding: 1rem 1rem;
+            font-size: 1.4rem;
+        }
+    }
+    &-outline{
+        border-radius: 3.2rem;
+        padding: 1rem 1.5rem;
+        font-size: 1.6rem;
+        padding: 1.5rem 3rem;
+        border-radius: 1rem;
+        color: #202142;
+        border: 1px solid #A4A4CB;
+        background-color:transparent;
+        
+        @include respond(tab-land){
+            padding: 1.5rem 1.5rem;
+        }
+        @include respond(phone){
+            padding: 1rem 1rem;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+
+.checkbox{
+    &-wrapper{
+        position: relative;
+        
+    }
+    &-control{
+        position: relative;
+        margin: 2rem 0;
+        display: flex;
+        
+    }
+    &-label{
+        cursor: pointer;
+        font-size: 1.6rem;
+        margin-left: 1.5rem;
+        font-family: $ff-poppins;
+        color: #000;
+        font-weight: 500;
+    }
+    &-check{
+        position: absolute;
+        left: 3px;
+        top: 3px;
+    }
+}
+input[type="checkbox"]{
+    appearance: none;
+    width: 2.7rem;
+    height: 2.7rem;
+    border: 1px solid #A4A4CB;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+
+    &:checked{
+        background-color: #FF6A95;
+        border: 1px solid transparent;
+    }
+}
+
+
+
+.content{
+    display: none;
+
+    &.active{
+        display: block;
+    }
+}
+
+.underline{
+    // text-align: left;
+    width: 80%;
+    margin: 4rem;
+    border-bottom: 1px solid #EFEFFF;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account-setting</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <main class="container">
+        <section class="container-settings">
+            <h1 class="heading-primary">Settings</h1>
+            <div class="container-setting">
+                <button data-id="publicProfile" class="btn btn-setting active">Profile Change</button>
+                <button data-id="accountSettings" class="btn btn-setting">Account settings</button>
+                <button data-id="notifications" class="btn btn-setting">Notifications</button>
+                <button data-id="proAccount" class="btn btn-setting">PRO Account</button>
+            </div>
+        </section>
+        <section class="container-main">
+            <section id="publicProfile" class="content section-main active">
+                <h2 class="heading-secondary">Public profile</h2>
+                <div class="section-main-profile">
+                    <div class="section-main-profile-img">
+                        <img src="./img/profile-pic.png" alt="">
+                    </div>
+                    <div class="section-main-profile-btn">
+                        <button class="btn btn-dark-blue">Change picture</button>
+                        <button class="btn btn-outline">Delete picture</button>
+                    </div>
+                </div>
+                <div class="section-main-bioData">
+                    <div class="form-control-1">
+                        <div class="form-control">
+                            <label for="name" class="label-text">First Name</label>
+                            <input type="text" id="name" class="primary-text" value="Nikhil">
+                        </div>
+                        <div class="form-control">
+                            <label for="lname" class="label-text">Last Name</label>
+                            <input type="text" class="primary-text" id="lname" value="Patel">
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="location" class="label-text">Location</label>
+                        <input type="text" class="primary-text" id="location" value="emailis@private.com">
+                    </div>
+                    <div class="form-control">
+                        <label for="profession" class="label-text">Profession</label>
+                        <input type="text" class="primary-text" id="profession" value="UI/UX Designer">
+                    </div>
+                    <div class="form-control">
+                        <label for="bio" class="label-text">Bio</label>
+                        <textarea type="text" class="primary-text" cols="10" rows="6" id="bio" placeholder="Desperately looking For Clients"></textarea>
+                    </div>
+
+                    <h2 class="heading-secondary">Online presence</h2>
+                    <div class="form-control form-control-icons">
+                        <img src="./img/dribbble.svg" alt="">
+                        <input type="text" class="primary-text" value="https://dribbble.com/uidesigndaily">
+                    </div>
+                    <div class="form-control form-control-icons">
+                        <img src="./img/instagram.svg" alt="">
+                        <input type="text" class="primary-text" value="https://instagram.com/uidesigndaily">
+                    </div>
+                    <p class="primary-text"><img src="./img/add.png" alt=""><span>Add other</span></p>
+
+                </div>
+            </section>
+      
+            <section id="accountSettings" class="content section-account">
+                <h2 class="heading-secondary">Account settings</h2>
+                <h4 class="heading-tertiary">Email address</h4>
+
+                <div class="section-account-wrapper">
+                    <p class="primary-text">Your email address is <span>emailis@private.com</span></p>
+                    <a href="" class="">Change</a>
+                </div>
+                <div class="section-account-wrapper">
+                    <p class="heading-tertiary">Password</p>
+                    <a href="" class="">Hide</a>
+                </div>
+
+                <div class=" form-control-1">
+                        <div>
+                            <label for="password" class="label-text">New Password</label>
+                            <input type="password" id="password" class="primary-text" value="********">
+                        </div>
+                        <div>
+                            <label for="Cpassword" class="label-text">Current Password</label>
+                            <input type="password" class="primary-text" id="cpassword" value="********">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-account-wrapper">
+                    <p class="primary-text">Can’t remember your current password? <a href="">Reset your password</a></p>
+                </div>
+                <button class="btn btn-dark-blue">Save password</button>
+                <div class="underline"></div>
+
+                <h4 class="heading-tertiary">Delete account</h4>
+                <p class="primary-text">Would you like to delete your account?</p>
+                <p class="primary-text">This account contains 1388 posts. Deleting your account will </p>
+                <p class="primary-text">remove all the content associated with it.</p>
+                <p class="danger-text">I want to delete my account</p>
+            </section>
+
+            <section id="notifications" class="content section-notification">
+                <h1 class="heading-secondary">Notifications</h1>
+                <h2 class="notification-heading">Email notifications</h2>
+
+                <div class="section-notification-items">
+                    <div>
+                        <h3 class="notification-sub-heading">Weekly newsletter</h3>
+                        <p class="notification-text">A small text about what the newsletters might contain.</p>
+                    </div>
+                    <div class="toggle toggle-off">
+                        <input type="checkbox" name="" class="toggle-input" id="toggle-off">
+                        <label for="toggle-off" class="toggle-label toggle-label-off"></label>
+                    </div>
+
+                </div>
+                <div class="section-notification-items">
+                    <div>
+                        <h3 class="notification-sub-heading">Weekly newsletter</h3>
+                        <p class="notification-text">A small text about what the newsletters might contain.</p>
+                    </div>
+                    <div class="toggle toggle-on">
+                        <input type="checkbox" name="" class="toggle-input" id="toggle-on">
+                        <label for="toggle-on" class="toggle-label toggle-label-on"></label>
+                    </div>
+                </div>
+
+                <h2 class="notification-heading">Website notifications</h2>
+                <div class="checkbox-wrapper">
+                    <div class="checkbox-control">
+                        <img src="./img/check.svg" class="checkbox-check" alt="">
+                        <input type="checkbox" name="" id="checkbox-1" checked>
+                        <label for="checkbox-1" class="checkbox-label">New follower</label>
+                    </div>
+                    <div class="checkbox-control">
+                        <img src="./img/check.svg" class="checkbox-check" alt="">
+                        <input type="checkbox" name="" id="checkbox-2">
+                        <label for="checkbox-2" class="checkbox-label">Post like</label>
+                    </div>
+                    <div class="checkbox-control">
+                        <img src="./img/check.svg" class="checkbox-check" alt="">
+                        <input type="checkbox" name="" id="checkbox-3" checked>
+                        <label for="checkbox-3" class="checkbox-label">Someone you followed posted</label>
+                    </div>
+                    <div class="checkbox-control">
+                        <img src="./img/check.svg" class="checkbox-check" alt="">
+                        <input type="checkbox" name="" id="checkbox-4">
+                        <label for="checkbox-4" class="checkbox-label">Post added to collection</label>
+                    </div>
+                    <div class="checkbox-control">
+                        <img src="./img/check.svg" class="checkbox-check" alt="">
+                        <input type="checkbox" name="" id="checkbox-5">
+                        <label for="checkbox-5" class="checkbox-label">Post downloaded</label>
+                    </div>
+                </div>
+
+                <div class="notification-button">
+                    <button class="btn btn-dark-blue">Save changes</button>
+                    <button class="btn btn-outline">Cancel</button>
+                </div>
+
+
+            </section>
+
+            <section id="proAccount" class="content section-proaccount">
+                <h2 class="heading-secondary">Pro Account</h2>
+                <div class="section-proaccount-profile">
+                  
+                    <div class="section-proaccount-profile-btn">
+                        <p class="primary-text">Congratulations... ,<br/> <span> you are a pro user now!</span></p>
+                        <button class="btn btn-outline">Check Benifits</button>
+                    </div>
+                    <div class="section-proaccount-profile-img">
+                        <img src="./img/profile-pic.png" alt="">
+                    </div>
+                </div>
+                <h3 class="heading-tertiary">Benifits</h3>
+                <p class="primary-text">Low budget web development</p>
+                <p class="primary-text">Online Presence 24/7. Having a website means customers are always able to find you – anytime, anywhere.</p>
+                <p class="primary-text">Brand visibility and brand recognition.</p>
+                <p class="primary-text">Easy online promotion of your small business with a website</p>
+                <p class="primary-text">Customer insights by tracking user behaviour on your website</p>
+                <p class="primary-text">Well-Formatted Content That Is Easy to S</p>
+                <p class="primary-text">Fast Load Times. .</p>
+            </section>
+        </section>
+    </main>
+
+
+
+
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,683 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.heading-primary {
+  font-size: 3.2rem;
+  font-family: "Merriweather", serif;
+  color: #202142;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading-primary {
+    font-size: 3rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+  color: #000;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.2rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  color: #000;
+  margin: 4rem 0;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading-tertiary {
+    font-size: 1.8rem;
+  }
+}
+
+.primary-text {
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  color: #202142;
+  font-weight: normal;
+}
+
+.primary-text span {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .primary-text {
+    font-size: 1.6rem;
+  }
+}
+
+.label-text {
+  display: block;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+.danger-text {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  color: red;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .danger-text {
+    font-size: 1.4rem;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  display: inline-block;
+  outline: 0;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  outline: 0;
+}
+
+.btn-setting {
+  border-radius: 3.2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.btn-setting.active {
+  background: #FCFCFF;
+  border: 1px solid #EFEFFF;
+  border-radius: 3.2rem;
+  font-weight: 500;
+}
+
+.btn-dark-blue {
+  border-radius: 3.2rem;
+  font-size: 1.6rem;
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: #202142;
+}
+
+@media only screen and (max-width: 75em) {
+  .btn-dark-blue {
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .btn-dark-blue {
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+  }
+}
+
+.btn-outline {
+  border-radius: 3.2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.6rem;
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  color: #202142;
+  border: 1px solid #A4A4CB;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 75em) {
+  .btn-outline {
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .btn-outline {
+    padding: 1rem 1rem;
+    font-size: 1.4rem;
+  }
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-control {
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+}
+
+.checkbox-label {
+  cursor: pointer;
+  font-size: 1.6rem;
+  margin-left: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-weight: 500;
+}
+
+.checkbox-check {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 2.7rem;
+  height: 2.7rem;
+  border: 1px solid #A4A4CB;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #FF6A95;
+  border: 1px solid transparent;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+.underline {
+  width: 80%;
+  margin: 4rem;
+  border-bottom: 1px solid #EFEFFF;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  body {
+    padding: 5rem 0;
+  }
+}
+
+.container {
+  width: 80%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 75em) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.container-settings {
+  min-width: 27rem;
+  height: 100%;
+  border-right: 1px solid #EFEFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container-settings {
+    min-width: 22rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .container-settings {
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid #EFEFFF;
+    padding-bottom: 2.5rem;
+  }
+}
+
+.container-setting {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .container-setting {
+    align-items: center;
+  }
+}
+
+.container-main {
+  width: 100%;
+  height: 100%;
+  padding: 6rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .container-main {
+    padding: 4rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .container-main {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
+.section-main-profile {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.section-main-profile-img {
+  width: 20rem;
+  height: 20rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #EFEFFF;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-main-profile-img {
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+  }
+}
+
+.section-main-profile-img img {
+  width: 17rem;
+  height: 17rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-main-profile-img img {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+.section-main-profile-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.section-main-bioData {
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.section-main-bioData p {
+  cursor: pointer;
+  display: none;
+  display: flex;
+  gap: .4rem;
+  margin-top: 3rem;
+}
+
+.section-main-bioData p span {
+  color: #201CCD;
+}
+
+.section-main .form-control {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.section-main .form-control-1 {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.section-main .form-control input, .section-main .form-control textarea {
+  outline: 0;
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid #C3C3E4;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-main .form-control input, .section-main .form-control textarea {
+    padding: 1rem 1.5rem;
+  }
+}
+
+.section-main .form-control textarea {
+  margin-bottom: 5rem;
+}
+
+.section-main .form-control label {
+  margin-bottom: 0.5rem;
+}
+
+.section-main .form-control-icons {
+  position: relative;
+}
+
+.section-main .form-control-icons input {
+  padding-left: 6rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-main .form-control-icons input {
+    padding-left: 4rem;
+  }
+}
+
+.section-main .form-control-icons img {
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+}
+
+.section-notification .notification-heading {
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  color: #000;
+  margin: 4rem 0;
+  font-weight: bold;
+}
+
+.section-notification .notification-sub-heading {
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-weight: bold;
+}
+
+.section-notification .notification-text {
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  font-weight: normal;
+  margin: 1rem 0;
+}
+
+.section-notification .notification-button {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.section-notification .notification-button button {
+  width: 18rem;
+  text-align: center;
+}
+
+.section-notification-items {
+  width: 80%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.section-notification-items div {
+  width: 70%;
+}
+
+.section-notification-items .toggle {
+  width: 30%;
+  position: relative;
+  text-align: center;
+}
+
+.section-notification-items .toggle-input {
+  height: 4rem;
+  opacity: 0;
+  position: absolute;
+  width: 40px;
+}
+
+.section-notification-items .toggle-label {
+  width: 7.1rem;
+  height: 4.1rem;
+  position: absolute;
+  border-radius: 5rem;
+  transition: .4s;
+}
+
+.section-notification-items .toggle-label::before {
+  content: "";
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.section-notification-items .toggle-label-off {
+  background-color: transparent;
+  border: 1px solid #A4A4CB;
+}
+
+.section-notification-items .toggle-label-off::before {
+  background-color: #A4A4CB;
+  left: 5px;
+  top: 4px;
+}
+
+.section-notification-items .toggle-label-on {
+  background-color: #FF6A95;
+  border: 1px solid #FF6A95;
+}
+
+.section-notification-items .toggle-label-on::before {
+  background-color: #fff;
+  left: 35px;
+  top: 4px;
+}
+
+.section-notification-items .toggle #toggle-off:checked + .toggle-label {
+  background: #FF6A95;
+  border: 1px solid #FF6A95;
+}
+
+.section-notification-items .toggle #toggle-off:checked + .toggle-label::before {
+  background: #fff;
+  left: 35px;
+}
+
+.section-notification-items .toggle #toggle-on:checked + .toggle-label {
+  background: #A4A4CB;
+  border: 1px solid #A4A4CB;
+}
+
+.section-notification-items .toggle #toggle-on:checked + .toggle-label::before {
+  background: #fff;
+  left: 5px;
+}
+
+.section-account-wrapper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-account-wrapper {
+    width: 90%;
+  }
+}
+
+.section-account-wrapper:nth-of-type(1) {
+  border-bottom: 1px solid #EFEFFF;
+}
+
+.section-account-wrapper a {
+  text-decoration: underline;
+  color: #201CCD;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.section-account .form-control-1 {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+  padding-bottom: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-account .form-control-1 {
+    gap: 2rem;
+    flex-direction: column;
+    margin-top: -3.5rem;
+  }
+}
+
+.section-account .form-control-1 input {
+  outline: 0;
+  padding: 1.5rem;
+  border: 1px solid #C3C3E4;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-account .form-control-1 input {
+    padding: 1rem;
+  }
+}
+
+.section-account .form-control-1 label {
+  margin-bottom: 0.5rem;
+}
+
+.section-account .form-control label {
+  margin-bottom: 0.5rem;
+}
+
+.section-proaccount-profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.section-proaccount-profile-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section-proaccount-profile-btn p span {
+  font-weight: bold;
+}
+
+.section-proaccount-profile-img {
+  width: 20rem;
+  height: 20rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #EFEFFF;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-proaccount-profile-img {
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+  }
+}
+
+.section-proaccount-profile-img img {
+  width: 17rem;
+  height: 17rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-proaccount-profile-img img {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+.section-proaccount p {
+  margin: 1.5rem 0;
+}
+/*# sourceMappingURL=main.css.map */

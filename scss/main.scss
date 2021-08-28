@@ -1,0 +1,436 @@
+@import './utility';
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+
+    @include respond(phone){
+        padding: 5rem 0;
+    }
+}
+
+.container{
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    // background-color: red;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include respond(tab-land){
+        width: 85%;
+    }
+    @include respond(tab-port){
+        width: 90%;
+    }
+    @include respond(phone){
+        width: 100%;
+        // padding-left: 5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-settings{
+        min-width: 27rem;
+        // width: 30%;
+        height: 100%;
+        border-right: 1px solid #EFEFFF;
+
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        @include respond(tab-port){
+            min-width: 22rem;
+        }
+        @include respond(phone){
+            min-width: 100%;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid transparent;
+            border-bottom: 1px solid #EFEFFF;
+            padding-bottom: 2.5rem;
+        }
+
+    }
+    &-setting{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-direction: column;
+        @include respond(phone){
+            align-items: center;
+        }
+
+        
+    }
+    &-main{
+        width: 100%;
+        // min-width: 70rem;
+        height: 100%;
+        padding: 6rem;
+
+        @include respond(tab-port){
+            padding: 4rem;
+        }
+        @include respond(phone){
+            width: 100%;
+            padding: 2rem;
+        }
+    }
+}
+
+
+.section{
+
+    &-main{
+
+        &-profile{
+            width: 100%;
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+
+            &-img{
+                width: 20rem;
+                height: 20rem;
+                padding: 1.5rem;
+                border-radius: 50%;
+                border: 1px solid #EFEFFF;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+                @include respond(phone){
+                    width: 15rem;
+                    height: 15rem;
+                    padding: 1rem;
+                }
+
+                & img {
+                    width: 17rem;
+                    height: 17rem;
+                    
+                @include respond(phone){
+                    width: 13rem;
+                    height: 13rem;
+                }
+                }
+            }
+
+            &-btn{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+
+        }
+
+        &-bioData{
+            margin-top: 5rem;
+            width: 100%;
+           
+            & p{
+                cursor: pointer;
+                display: none;
+                display: flex;
+                gap: .4rem;
+                margin-top: 3rem;
+                & span{
+                    color: #201CCD;
+                }
+            }
+        }
+
+        & .form-control{
+            position: relative;
+            display: block;
+            width: 100%;
+            margin-top: 3rem;
+
+            &-1{
+                width: 100%;
+                display: flex;
+                gap: 2rem;
+            }
+
+           
+
+            & input, textarea{
+                outline: 0;
+                width: 100%;
+                padding: 1.5rem;
+                border: 1px solid #C3C3E4;
+                border-radius: 1rem;
+
+                @include respond(phone){
+                    padding: 1rem 1.5rem;
+                }
+            }
+
+            & textarea {
+                margin-bottom: 5rem;
+            }
+
+            & label{
+                margin-bottom: 0.5rem;
+            }
+
+        }
+        & .form-control-icons{
+            position: relative;
+
+            & input {
+                padding-left: 6rem;
+                
+                @include respond(phone){
+                    padding-left: 4rem;
+                }
+            }
+            & img{
+                position: absolute;
+                top: 1rem;
+                left: 0.5rem;
+            }
+        }
+
+    }
+
+
+    // section-notifiaction
+    &-notification{
+        .notification-heading{
+            font-size: 2rem;
+            font-family: $ff-merriweather;
+            color: #000;
+            margin: 4rem 0;
+            font-weight: bold;
+        }
+        .notification-sub-heading{
+            font-size: 1.8rem;
+            font-family: $ff-poppins;
+            color: #000;
+            font-weight: bold;
+        }
+       .notification-text{
+            font-size: 1.8rem;
+            font-family: $ff-poppins;
+            color: #000;
+            font-weight: normal;
+            margin: 1rem 0;
+       }
+
+       .notification-button{
+           display: flex;
+           gap: 2rem;
+           margin-top: 4rem;
+
+           & button{
+               width: 18rem;
+               text-align: center;
+           }
+       }
+
+       &-items{
+           width: 80%;
+           position: relative;
+           display: flex;
+           justify-content: space-between;
+           margin-bottom: 3rem;
+            & div {
+                width: 70%;
+            }
+           .toggle{
+               width: 30%;
+               position: relative;
+               text-align: center;
+
+
+                &-input {
+                        height: 4rem;
+                        // left: 0;
+                        opacity: 0;
+                        position: absolute;
+                        // top: 0;
+                        width: 40px;    
+                }
+                
+                    
+                &-label {
+                    width: 7.1rem;
+                    height: 4.1rem;  
+                    position: absolute;
+                    border-radius: 5rem;
+                    transition: .4s;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 31px;
+                        height: 31px;
+                        border-radius: 50%;
+                        transition: .4s;
+                    }
+                    &-off{
+                        background-color: transparent;
+                        border: 1px solid #A4A4CB;
+                        &::before{
+                            background-color: #A4A4CB;
+                            left: 5px;
+                            top: 4px;
+                        }
+                    }
+                    &-on{
+                        background-color: #FF6A95;
+                        border: 1px solid #FF6A95;
+                        &::before{
+                            background-color: #fff;
+                            left: 35px;
+                            top: 4px;
+                        }
+                    }
+                }
+
+                #toggle-off:checked + .toggle-label {
+                    background: #FF6A95;
+                    border: 1px solid #FF6A95;
+                    
+                }
+                #toggle-off:checked + .toggle-label::before {
+                    background: #fff;
+                    left: 35px;
+                    
+                    }
+                #toggle-on:checked + .toggle-label {
+                    background: #A4A4CB;
+                    border: 1px solid #A4A4CB;
+                    
+                }
+                #toggle-on:checked + .toggle-label::before {
+                    background: #fff;
+                    left: 5px; 
+                }
+            }
+       }
+
+    }
+
+    // account
+    &-account{
+
+        &-wrapper{
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 2rem;
+
+            @include respond(phone){
+                width: 90%;
+            }
+
+            &:nth-of-type(1){
+                border-bottom:1px solid #EFEFFF;
+            }
+
+            & a{
+                text-decoration: underline;
+                color: #201CCD;
+                font-family: $ff-poppins;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }
+        }
+
+        & .form-control{
+            &-1{
+                width: 100%;
+
+                display: flex;
+                gap: 4rem;
+                padding-bottom: 3rem;
+                @include respond(phone){
+                    gap: 2rem;
+                    flex-direction: column;
+                    margin-top: -3.5rem;
+                }
+                & input{
+                    outline: 0;
+                    padding: 1.5rem;
+                    border: 1px solid #C3C3E4;
+                    border-radius: 1rem;
+                    @include respond(phone){
+                        padding: 1rem;
+                    }
+                }
+                & label{
+                    margin-bottom: 0.5rem;
+                }
+       
+            }
+
+            & label{
+                margin-bottom: 0.5rem;
+            }
+
+        }
+    }
+
+    &-proaccount{
+        &-profile{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 2rem;
+
+            &-btn{
+                display: flex;
+                flex-direction: column;
+                
+                gap: 3rem;
+                & p{
+                    & span{
+                        font-weight: bold;
+                    }
+                }
+            }
+            &-img{
+                width: 20rem;
+                height: 20rem;
+                padding: 1.5rem;
+                border-radius: 50%;
+                border: 1px solid #EFEFFF;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+                @include respond(phone){
+                    width: 15rem;
+                    height: 15rem;
+                    padding: 1rem;
+                }
+
+                & img {
+                    width: 17rem;
+                    height: 17rem;
+                    
+                @include respond(phone){
+                    width: 13rem;
+                    height: 13rem;
+                }
+                }
+            }
+        }
+        & p{
+            margin: 1.5rem 0;
+        }
+
+    }
+}
