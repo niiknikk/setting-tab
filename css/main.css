@@ -225,8 +225,17 @@ input[type="checkbox"]:checked {
 
 .underline {
   width: 80%;
-  margin: 4rem;
   border-bottom: 1px solid #EFEFFF;
+}
+
+.underline-2 {
+  margin: 4rem 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .underline {
+    width: 100%;
+  }
 }
 
 body {
@@ -384,6 +393,12 @@ body {
   width: 100%;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .section-main-bioData {
+    margin-top: 0rem;
+  }
+}
+
 .section-main-bioData p {
   cursor: pointer;
   display: none;
@@ -507,7 +522,7 @@ body {
   height: 4rem;
   opacity: 0;
   position: absolute;
-  width: 40px;
+  width: 4rem;
 }
 
 .section-notification-items .toggle-label {
@@ -518,6 +533,13 @@ body {
   transition: .4s;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .section-notification-items .toggle-label {
+    width: 3.51rem;
+    height: 2.1rem;
+  }
+}
+
 .section-notification-items .toggle-label::before {
   content: "";
   position: absolute;
@@ -525,6 +547,13 @@ body {
   height: 31px;
   border-radius: 50%;
   transition: .4s;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-notification-items .toggle-label::before {
+    width: 1.51rem;
+    height: 1.51rem;
+  }
 }
 
 .section-notification-items .toggle-label-off {
@@ -538,6 +567,13 @@ body {
   top: 4px;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .section-notification-items .toggle-label-off::before {
+    left: 2.5px;
+    top: 2px;
+  }
+}
+
 .section-notification-items .toggle-label-on {
   background-color: #FF6A95;
   border: 1px solid #FF6A95;
@@ -547,6 +583,13 @@ body {
   background-color: #fff;
   left: 35px;
   top: 4px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-notification-items .toggle-label-on::before {
+    left: 16.5px;
+    top: 2px;
+  }
 }
 
 .section-notification-items .toggle #toggle-off:checked + .toggle-label {
@@ -559,6 +602,12 @@ body {
   left: 35px;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .section-notification-items .toggle #toggle-off:checked + .toggle-label::before {
+    left: 16.5px;
+  }
+}
+
 .section-notification-items .toggle #toggle-on:checked + .toggle-label {
   background: #A4A4CB;
   border: 1px solid #A4A4CB;
@@ -567,6 +616,12 @@ body {
 .section-notification-items .toggle #toggle-on:checked + .toggle-label::before {
   background: #fff;
   left: 5px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-notification-items .toggle #toggle-on:checked + .toggle-label::before {
+    left: 2.5px;
+  }
 }
 
 .section-account-wrapper {
@@ -581,10 +636,6 @@ body {
   .section-account-wrapper {
     width: 90%;
   }
-}
-
-.section-account-wrapper:nth-of-type(1) {
-  border-bottom: 1px solid #EFEFFF;
 }
 
 .section-account-wrapper a {

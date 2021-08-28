@@ -230,6 +230,12 @@ input[type="checkbox"]{
 .underline{
     // text-align: left;
     width: 80%;
-    margin: 4rem;
     border-bottom: 1px solid #EFEFFF;
+
+    &-2{
+        margin: 4rem 0;
+    }
+    @include respond(phone){
+        width: 100%;
+    }    
 }
